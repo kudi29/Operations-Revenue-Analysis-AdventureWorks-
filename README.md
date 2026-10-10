@@ -110,6 +110,18 @@ Revenue grew strongly over the analysis period, but margins did not keep pace. P
 - **Some products performed very differently by channel.** Touring Bikes lost money through Resellers at a -11.84% margin but were profitable through the Internet channel at a 37.84% margin.
 - **The recorded discount field was unreliable.** The source discount percentage was zero on every row, even though some reseller sales amounts were below their extended amounts. Effective discounts were therefore derived for investigation, while Sales Amount remained the source of truth.
 
+### Report preview
+
+**Executive Overview:** sales over time against the prior year, revenue and profit by fiscal year, and territory performance, filtered by date range, territory, and channel.
+
+[![Executive Overview page of the Power BI report](images/Executive_overview.png)](images/Executive_overview.png)
+
+**Product Performance:** category, subcategory, and product-level sales, gross profit, and margin.
+
+[![Product Performance page of the Power BI report](images/Product_performance.png)](images/Product_performance.png)
+
+*Click an image to view it full size.*
+
 ## Tools and Technologies
 
 | Tool / technique | How it was used |
@@ -252,6 +264,10 @@ The Gold tables were loaded into Power BI to create a semantic model designed fo
 - Set the order date relationship as active, with due date and ship date relationships inactive so the different date roles could be used through DAX when required.
 - Hid technical foreign-key columns from report users.
 - Stored measures in a dedicated measure table.
+
+[![Power BI model view showing the sales fact table connected to its five dimensions](images/data_model.png)](images/data_model.png)
+
+*Power BI model view: the sales fact table connected to its five dimensions. Order date is the active date relationship; due date and ship date are inactive.*
 
 ### Fiscal calendar
 
@@ -396,13 +412,14 @@ operations-and-revenue-analysis/
 ├── power-bi/
 │   └── operations-and-revenue-analysis.pbix
 ├── images/
-│   ├── executive-overview.png
-│   └── product-performance.png
+│   ├── Executive_overview.png
+│   ├── Product_performance.png
+│   └── data_model.png
 └── docs/
     └── Operations_and_Revenue_Analysis_Portfolio.pdf
 ```
 
-**Note:** This is a suggested layout. Rename paths to match what your repository actually contains, add screenshots only once exported, and include the PBIX file only if you can share it.
+**Note:** This is a suggested layout. Rename paths to match what your repository actually contains, and include the PBIX file only if you can share it. Image filenames are case-sensitive on GitHub, so they must match the README exactly.
 
 ## How to Explore the Project
 
